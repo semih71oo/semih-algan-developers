@@ -1,4 +1,5 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { AuthCallbackRedirect } from '../components/AuthCallbackRedirect'
 
 
 import '../styles.css'
@@ -57,6 +58,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <AuthCallbackRedirect />
         {children}
         <Scripts />
       </body>
