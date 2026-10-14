@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
+import { DeveloperBoard } from '../components/DeveloperBoard'
 import { ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, Check, CheckCheck, ChevronRight, Code2, Copy, Dribbble, Mail, MapPin, Menu, Phone, Puzzle, Sparkles, X } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
@@ -35,8 +36,9 @@ function HomePage() {
           <a className="nav-active" href="#baslangic">Ana Sayfa</a>
           <a href="#yazilimlar">Yazılımlar <span className="nav-badge">Yakında</span></a>
           <a href="#hakkimda">Hakkımda</a>
+          <a href="#pano">Geliştiriciler</a>
         </nav>
-        <a className="header-contact" href="#iletisim">İletişime geç <ArrowUpRight size={16} /></a>
+        <a className="header-contact" href="/giris">Panele giriş <ArrowUpRight size={16} /></a>
         <button className="menu-toggle" type="button" aria-label={menuOpen ? 'Menüyü kapat' : 'Menüyü aç'} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X /> : <Menu />}
         </button>
@@ -45,6 +47,8 @@ function HomePage() {
         <a href="#baslangic" onClick={closeMenu}>Ana Sayfa</a>
         <a href="#yazilimlar" onClick={closeMenu}>Yazılımlar · Yakında</a>
         <a href="#hakkimda" onClick={closeMenu}>Hakkımda</a>
+        <a href="#pano" onClick={closeMenu}>Geliştiriciler</a>
+        <a href="/giris" onClick={closeMenu}>Panele giriş <ArrowUpRight size={17} /></a>
         <a href="#iletisim" onClick={closeMenu}>İletişime geç <ArrowUpRight size={17} /></a>
       </nav>
       <main id="icerik">
@@ -82,6 +86,7 @@ function HomePage() {
             <a className="coming-link" href="#iletisim">Aklında bir fikir mi var? <ArrowUpRight size={18} /></a>
           </div>
         </section>
+        <DeveloperBoard />
         <section className="about-section container section-space" id="hakkimda" aria-labelledby="about-title">
           <div className="about-card"><span className="small-label">KODUN ARKASINDAKİ İNSAN</span><div className="monogram">sa<span>.</span></div><div className="profile-caption"><span>Semih Algan</span><span>Yazılım Geliştirici <ArrowUpRight size={16} /></span></div><div className="profile-location"><MapPin size={15} /> Kırıkkale, Türkiye</div></div>
           <div className="about-copy"><div className="eyebrow section-eyebrow">02 / HAKKIMDA</div><h2 id="about-title">Merakla başladı.<br /><span>Kodla devam ediyor.</span></h2><p>Ben Semih Algan. 26 Mayıs 2011’de Kırıkkale’nin Merkez ilçesinde doğdum. Yazılım geliştirmeyi seven, fikirlerini hayata geçirmekten keyif alan bir geliştiriciyim.</p><p>Basketbol ve satrançla ilgileniyorum. Sahada takım ruhunu, satrançta stratejik düşünmeyi seviyorum. Aynı merakı ve çözüm odaklı bakışı yazılımlarıma da taşıyorum.</p><div className="interest-tags"><span><Code2 size={16} /> Yazılım</span><span><Dribbble size={16} /> Basketbol</span><span><Puzzle size={16} /> Satranç</span></div><a className="about-link" href="#iletisim">Tanışalım <ArrowUpRight size={17} /></a></div>
