@@ -1,5 +1,6 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { AuthCallbackRedirect } from '../components/AuthCallbackRedirect'
+import { NotFoundPage } from '../components/NotFoundPage'
 
 
 import '../styles.css'
@@ -81,6 +82,7 @@ export const Route = createRootRoute({
     ],
   }),
   shellComponent: RootDocument,
+  notFoundComponent: NotFoundPage,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {

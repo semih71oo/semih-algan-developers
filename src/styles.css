@@ -9,6 +9,18 @@ button { font: inherit; cursor: pointer; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible { outline: 3px solid #649b48; outline-offset: 5px; }
 ::selection { background: var(--lime); color: var(--ink); }
+.not-found-page { min-height: 100svh; display: flex; flex-direction: column; }
+.not-found-main { flex: 1; display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: clamp(32px, 6vw, 90px); padding-block: 64px; }
+.not-found-art { position: relative; isolation: isolate; display: grid; place-items: center; min-height: 340px; border: 1px solid var(--line); border-radius: 16px; background: #eff3e8; overflow: hidden; }
+.not-found-art::before, .not-found-art::after { content: ''; position: absolute; z-index: -1; width: 280px; height: 280px; border: 1px solid #cbd6c3; border-radius: 50%; }
+.not-found-art::after { width: 380px; height: 380px; }
+.not-found-code { font-family: 'DM Sans', sans-serif; font-size: clamp(110px, 14vw, 180px); font-weight: 500; letter-spacing: -.07em; color: var(--green); padding-right: .07em; }
+.not-found-code-mark { position: absolute; right: 24px; bottom: 24px; display: grid; place-items: center; width: 54px; height: 54px; border-radius: 12px; background: var(--green); color: var(--lime); transform: rotate(-12deg); }
+.not-found-copy h1 { font-size: clamp(34px, 4vw, 52px); letter-spacing: -1.8px; line-height: 1.15; margin-top: 20px; }
+.not-found-description { max-width: 420px; margin-top: 22px; color: #617063; font-size: 14px; line-height: 1.9; }
+.not-found-copy .button { margin-top: 28px; }
+.not-found-footer { border-top: 1px solid var(--line); padding-block: 25px; font-size: 11px; color: #617063; }
+@media (max-width: 760px) { .not-found-main { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-block: 36px 48px; }.not-found-art { min-height: 240px; }.not-found-code { font-size: 130px; }.not-found-copy h1 { font-size: clamp(32px, 8vw, 44px); }.not-found-description { font-size: 13px; } }
 h1, h2, h3, p { margin: 0; }
 svg { flex-shrink: 0; }
 .container { width: min(1180px, calc(100% - 96px)); margin-inline: auto; }
