@@ -1,13 +1,10 @@
-import type { UserLoginEvent, UserValidateEvent } from '@netlify/functions'
+import type { UserLoginEvent } from '@netlify/functions'
 import { eq } from 'drizzle-orm'
 import { getDb } from '../../db/index.js'
 import { profiles } from '../../db/schema.js'
 import { hasAdminRole } from '../lib/authorization.js'
 
 export default {
-  userValidate(event: UserValidateEvent) {
-    if (!event.user.invitedAt) return event.deny()
-  },
   async userLogin(event: UserLoginEvent) {
     if (hasAdminRole(event.user)) return
     try {
