@@ -24,7 +24,11 @@ export const Route = createRootRoute({
   head: () => ({
     links: [
       { rel: 'icon', type: 'image/x-icon', sizes: '16x16 32x32 48x48', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/favicon-48x48.png' },
+      { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon-192x192.png' },
       { rel: 'icon', type: 'image/png', sizes: '256x256', href: '/favicon.png' },
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap' },
