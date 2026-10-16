@@ -10,6 +10,15 @@ const siteDescription = 'Semih Algan’ın yazılım vitrini. Yeni yazılımlar 
 const siteUrl = 'https://test27267272.netlify.app'
 const ogImage = `${siteUrl}/og-image.png`
 const ogImageAlt = 'semihalgan. — İyi fikirler, güçlü yazılımlar.'
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Semih Algan',
+  url: 'https://semihalgan.com.tr',
+  birthDate: '2011-05-26',
+  jobTitle: 'Yazılım Geliştirici',
+  sameAs: ['https://semihalgan.com.tr'],
+}
 
 export const Route = createRootRoute({
   head: () => ({
@@ -78,6 +87,12 @@ export const Route = createRootRoute({
       {
         name: 'twitter:image:alt',
         content: ogImageAlt,
+      },
+    ],
+    scripts: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify(personSchema),
       },
     ],
   }),
