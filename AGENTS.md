@@ -9,10 +9,11 @@ The owner explicitly requested a coming-soon announcement, not example products.
 ## Key files
 
 - `src/routes/index.tsx`: complete landing page, biography, public contact details, mobile navigation, and clipboard feedback.
-- `src/routes/__root.tsx`: Turkish document shell, metadata, Google Fonts links, and favicon. `siteName` and `siteDescription` are finished sharing copy; do not add `og:image` because the platform supplies it.
+- `src/routes/__root.tsx`: Turkish document shell, metadata, Google Fonts links, and favicon. `siteName` and `siteDescription` are finished sharing copy. `og:image` and `twitter:image` point to the owner-approved branded card at `public/og-image.png` (1200×630) via an absolute production URL.
 - `src/styles.css`: color tokens, custom layouts, CSS artwork, responsive breakpoints, focus styles, and reduced-motion behavior.
 - `src/router.tsx`: router factory and scroll restoration.
 - `public/favicon.svg`: custom code-mark favicon.
+- `public/og-image.png`: 1200×630 social share card (cream background, green code-mark icon, `semihalgan.` wordmark).
 - `vite.config.ts` and `netlify.toml`: framework and Netlify deployment configuration.
 - `.agents/skills/`: local framework instructions; read the relevant skill before extending framework features.
 - `.netlify/results.md`: standalone description of the completed changes.

@@ -6,6 +6,9 @@ import '../styles.css'
 
 const siteName = 'Semih Algan — Yazılım & Fikirler'
 const siteDescription = 'Semih Algan’ın yazılım vitrini. Yeni yazılımlar yakında; geliştiriciyi tanıyın, fikirlerinizi paylaşın ve iletişime geçin.'
+const siteUrl = 'https://test27267272.netlify.app'
+const ogImage = `${siteUrl}/og-image.png`
+const ogImageAlt = 'semihalgan. — İyi fikirler, güçlü yazılımlar.'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -43,8 +46,36 @@ export const Route = createRootRoute({
         content: 'website',
       },
       {
+        property: 'og:url',
+        content: siteUrl,
+      },
+      {
+        property: 'og:image',
+        content: ogImage,
+      },
+      {
+        property: 'og:image:width',
+        content: '1200',
+      },
+      {
+        property: 'og:image:height',
+        content: '630',
+      },
+      {
+        property: 'og:image:alt',
+        content: ogImageAlt,
+      },
+      {
         name: 'twitter:card',
         content: 'summary_large_image',
+      },
+      {
+        name: 'twitter:image',
+        content: ogImage,
+      },
+      {
+        name: 'twitter:image:alt',
+        content: ogImageAlt,
       },
     ],
   }),
