@@ -7,3 +7,9 @@
   command = "npm run dev"
   targetPort = 3000
   port = 8889
+[[redirects]]
+  from = "/eski-sayfa"
+  to = "/yeni-sayfa"
+  status = 301
+  force = true
+
