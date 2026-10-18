@@ -8,8 +8,8 @@
   targetPort = 3000
   port = 8889
 [[redirects]]
-  from = "/eski-sayfa"
-  to = "/yeni-sayfa"
+  from = "https://semih-algan-developers.netlify.app/"
+  to = "/semihalgan.com.tr"
   status = 301
   force = true
 
